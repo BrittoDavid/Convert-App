@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Convert
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
@@ -25,3 +26,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+=======
+# Convert-App
+>>>>>>> 9ceee5ad647701fd6dcc9e1e28dc5ed2ce9b64d5
