@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConvertComponent implements OnInit {
 
-  cantidad = 0;
+  cantidad!: number;
   tengo = 'USD';
   quiero = 'EUR';
   total = 0;
@@ -24,58 +24,58 @@ export class ConvertComponent implements OnInit {
           this.total = this.cantidad
         }else if(this.quiero === 'LIBRA')
         {
-          this.total = this.cantidad * 2 
+          this.total = this.cantidad * 0.74 
         }else if(this.quiero === 'EUR')
         {
-          this.total = this.cantidad * 3 
+          this.total = this.cantidad * 0.89 
         }else if(this.quiero === 'PESOS')
         {
-          this.total = this.cantidad * 4 
+          this.total = this.cantidad * 4080
         }
       break;
       case 'EUR':
-        if( this.quiero === 'USD')
+        if( this.quiero === 'EUR')
         {
           this.total = this.cantidad
         }else if(this.quiero === 'LIBRA')
         {
-          this.total = this.cantidad * 2 
-        }else if(this.quiero === 'EUR')
+          this.total = this.cantidad * 0.83 
+        }else if(this.quiero === 'USD')
         {
-          this.total = this.cantidad * 3 
+          this.total = this.cantidad * 1.13 
         }else if(this.quiero === 'PESOS')
         {
-          this.total = this.cantidad * 4 
+          this.total = this.cantidad * 4605 
         }
       break;
       case 'LIBRA':
-        if( this.quiero === 'USD')
+        if( this.quiero === 'LIBRA')
         {
           this.total = this.cantidad
-        }else if(this.quiero === 'LIBRA')
+        }else if(this.quiero === 'USD')
         {
-          this.total = this.cantidad * 2 
+          this.total = this.cantidad * 1.35
         }else if(this.quiero === 'EUR')
         {
-          this.total = this.cantidad * 3 
+          this.total = this.cantidad * 1.20 
         }else if(this.quiero === 'PESOS')
         {
-          this.total = this.cantidad * 4 
+          this.total = this.cantidad * 5522 
         }
       break;
       case 'PESOS':
-        if( this.quiero === 'USD')
+        if( this.quiero === 'PESOS')
         {
           this.total = this.cantidad
         }else if(this.quiero === 'LIBRA')
         {
-          this.total = this.cantidad * 2 
+          this.total = this.cantidad * 0.00018 
         }else if(this.quiero === 'EUR')
         {
-          this.total = this.cantidad * 3 
-        }else if(this.quiero === 'PESOS')
+          this.total = this.cantidad * 0.00022 
+        }else if(this.quiero === 'USD')
         {
-          this.total = this.cantidad * 4 
+          this.total = this.cantidad * 0.00025 
         }
       break;
       default:
@@ -83,7 +83,10 @@ export class ConvertComponent implements OnInit {
     }
   }
 
-  constructor() { }
+  constructor() 
+  { 
+
+  }
 
   ngOnInit(): void {
   }
